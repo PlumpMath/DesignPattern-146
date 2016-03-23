@@ -6,5 +6,5 @@ import com.zzkun.planewar.plane.BasePlane;
  * Created by kun on 2016/3/22.
  */
 public abstract class PlaneFactory {
-    abstract BasePlane createPlane(String name);
+    abstract public BasePlane createPlane(String name);
 }

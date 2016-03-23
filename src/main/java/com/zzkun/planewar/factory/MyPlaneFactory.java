@@ -12,7 +12,7 @@ import com.zzkun.planewar.plane.MyPlane;
  */
 public class MyPlaneFactory extends PlaneFactory {
     @Override
-    BasePlane createPlane(String name) {
+    public BasePlane createPlane(String name) {
         BasePlane res = new MyPlane(Position.random(), name);
         res.setColorBehavior(new BlurColor());
         res.setFlyBehavior(new FastSpeedFly());

@@ -12,7 +12,7 @@ import com.zzkun.planewar.plane.EnemyBoss;
  */
 public class EnemyBossFactory extends PlaneFactory {
     @Override
-    BasePlane createPlane(String name) {
+    public BasePlane createPlane(String name) {
         BasePlane res = new EnemyBoss(Position.random(), name);
         res.setColorBehavior(new RedColor());
         res.setFlyBehavior(new FastSpeedFly());

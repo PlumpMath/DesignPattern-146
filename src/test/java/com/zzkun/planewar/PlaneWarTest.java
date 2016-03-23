@@ -2,6 +2,9 @@ package com.zzkun.planewar;
 
 import com.zzkun.planewar.behavior.color.RedColor;
 import com.zzkun.planewar.behavior.fly.FastSpeedFly;
+import com.zzkun.planewar.factory.EnemyBossFactory;
+import com.zzkun.planewar.factory.EnemyPlaneFactory;
+import com.zzkun.planewar.factory.MyPlaneFactory;
 import com.zzkun.planewar.model.Position;
 import com.zzkun.planewar.plane.EnemyBoss;
 import com.zzkun.planewar.plane.EnemyPlane;
@@ -16,11 +19,11 @@ import static org.junit.Assert.*;
 public class PlaneWarTest {
 
     @Test
-    public void test() {
-        MyPlane myPlane = new MyPlane(Position.random(), "°夏沫浅雨つ");
-        EnemyPlane enemyPlane1 = new EnemyPlane(Position.random(), "、浅夏诗韵");
-        EnemyPlane enemyPlane2 = new EnemyPlane(Position.random(), "ンバ离8弃。");
-        EnemyBoss boss = new EnemyBoss(Position.random(), "这殇，太美、");
+    public void test1() {
+        MyPlane myPlane = (MyPlane) new MyPlaneFactory().createPlane("°夏沫浅雨つ");
+        EnemyPlane enemyPlane1 = (EnemyPlane) new EnemyPlaneFactory().createPlane("、浅夏诗韵");
+        EnemyPlane enemyPlane2 = (EnemyPlane) new EnemyPlaneFactory().createPlane("ンバ离8弃。");
+        EnemyBoss boss = (EnemyBoss) new EnemyBossFactory().createPlane("这殇，太美、");
 
         myPlane.display();
         enemyPlane1.display();
