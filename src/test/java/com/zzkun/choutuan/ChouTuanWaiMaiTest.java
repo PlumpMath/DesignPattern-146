@@ -30,6 +30,8 @@ public class ChouTuanWaiMaiTest {
         waiMai.onCancleWasPushed("鸡肉卷");
         System.out.println("\n");
 
+        System.out.println(waiMai);
+
         waiMai.onOrderWasPushed("胖人吉米");
     }
 
