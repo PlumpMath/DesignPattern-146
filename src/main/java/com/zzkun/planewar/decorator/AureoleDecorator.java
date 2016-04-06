@@ -5,6 +5,7 @@ import com.zzkun.planewar.model.Position;
 import com.zzkun.planewar.plane.BasePlane;
 
 /**
+ * 装饰者：光环
  * Created by kun on 2016/3/22.
  */
 public class AureoleDecorator extends PlaneDecorator {
