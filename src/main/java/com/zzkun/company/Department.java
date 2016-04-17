@@ -32,6 +32,11 @@ public class Department extends TreeNode {
     }
 
     @Override
+    public List<TreeNode> getChilds() {
+        return list;
+    }
+
+    @Override
     public TreeNode remove(TreeNode node) {
         list.remove(node);
         return this;
@@ -67,5 +72,14 @@ public class Department extends TreeNode {
     @Override
     public Iterator<TreeNode> createIterator() {
         return new DepartmentIterator(list.iterator());
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "list=" + list +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

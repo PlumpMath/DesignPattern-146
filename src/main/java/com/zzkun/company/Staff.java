@@ -41,4 +41,13 @@ public class Staff extends TreeNode {
         for(int i = 0; i < dent; ++i) pre += "    ";
         System.out.println(pre + getName() + "(Rank" + getRank() + "): " + getDescription());
     }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", rank=" + rank +
+                '}';
+    }
 }

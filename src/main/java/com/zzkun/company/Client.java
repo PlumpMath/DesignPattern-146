@@ -33,13 +33,29 @@ public class Client {
 
         root.show();
 
+        System.out.println();
+        System.out.println("迭代器遍历所有员工：");
         Iterator<TreeNode> iterator = root.createIterator();
         while(iterator.hasNext()) {
             TreeNode node = iterator.next();
-            if(node instanceof Staff)
-                node.show();
+            if(node != null) node.show();
         }
 
+        System.out.println();
+        System.out.println("迭代器遍历所有分公司员工：");
+        iterator = fengongsi.createIterator();
+        while(iterator.hasNext()) {
+            TreeNode node = iterator.next();
+            if(node != null) node.show();
+        }
+
+        System.out.println();
+        System.out.println("迭代器遍历所有等级高于3的员工：");
+        iterator = root.createIterator();
+        while(iterator.hasNext()) {
+            TreeNode node = iterator.next();
+            if(node != null && node.getRank() <= 3) node.show();
+        }
     }
 
 }

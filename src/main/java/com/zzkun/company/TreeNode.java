@@ -2,6 +2,7 @@ package com.zzkun.company;
 
 
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by kun on 2016/4/13.
@@ -30,6 +31,10 @@ public abstract class TreeNode {
      * @return 第i个位置的子节点
      */
     public TreeNode getChild(int i) {
+        throw new UnsupportedOperationException();
+    }
+
+    public List<TreeNode> getChilds() {
         throw new UnsupportedOperationException();
     }
 
