@@ -20,7 +20,7 @@ public class People {
 
     void goUp() {
         if(current == 2) {
-            System.out.println("您已经在2楼");
+            System.out.println("您已经在最高层，按钮按不动");
             return;
         }
         if(elevator1.state == elevator1.stopState && elevator1.current == 1) {
@@ -36,7 +36,7 @@ public class People {
 
     void goDown() {
         if(current == 1) {
-            System.out.println("您已经在2楼");
+            System.out.println("您已经在最底层，按钮按不动");
             return;
         }
         if(elevator1.state == elevator1.stopState && elevator1.current == 2) {
