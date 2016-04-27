@@ -1,5 +1,7 @@
 package com.zzkun.compound.observer;
 
+import com.zzkun.compound.ducks.AbstractDuck;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +11,9 @@ import java.util.List;
 public class Observable implements DuckObservable {
 
     List<Observer> list = new ArrayList<>();
-    DuckObservable duck;
+    AbstractDuck duck;
 
-    public Observable(DuckObservable duck) {
+    public Observable(AbstractDuck duck) {
         this.duck = duck;
     }
 
@@ -21,8 +23,8 @@ public class Observable implements DuckObservable {
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(String info) {
         for(Observer observer : list)
-            observer.update(duck);
+            observer.update(duck, info);
     }
 }

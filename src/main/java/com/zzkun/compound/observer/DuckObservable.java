@@ -5,5 +5,5 @@ package com.zzkun.compound.observer;
  */
 public interface DuckObservable {
     void registerObserver(Observer observer);
-    void notifyObservers();
+    void notifyObservers(String info);
 }

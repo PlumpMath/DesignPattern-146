@@ -1,6 +1,8 @@
 package com.zzkun.compound.factory;
 
 import com.zzkun.compound.ducks.*;
+import com.zzkun.compound.goose.Goose;
+import com.zzkun.compound.goose.GooseAdapter;
 import com.zzkun.compound.util.QuackCounter;
 
 /**
@@ -8,22 +10,27 @@ import com.zzkun.compound.util.QuackCounter;
  */
 public class CountingDuckFactory extends AbstractDuckFactory {
     @Override
-    public Quackable createMallardDuck() {
+    public AbstractDuck createMallardDuck() {
         return new QuackCounter(new MallardDuck());
     }
 
     @Override
-    public Quackable createRedheadDuck() {
+    public AbstractDuck createRedheadDuck() {
         return new QuackCounter(new RedheadDuck());
     }
 
     @Override
-    public Quackable createDuckCall() {
+    public AbstractDuck createDuckCall() {
         return new QuackCounter(new DuckCall());
     }
 
     @Override
-    public Quackable createRubberDuck() {
+    public AbstractDuck createRubberDuck() {
         return new QuackCounter(new RubberDuck());
+    }
+
+    @Override
+    public AbstractDuck createGoose() {
+        return new QuackCounter(new GooseAdapter(new Goose()));
     }
 }

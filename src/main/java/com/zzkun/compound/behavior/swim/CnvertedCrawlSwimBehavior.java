@@ -6,6 +6,6 @@ package com.zzkun.compound.behavior.swim;
 public class CnvertedCrawlSwimBehavior implements SwimBehavior {
     @Override
     public void swim() {
-        System.out.println("鸭子正在仰泳...");
+        System.out.println("我正在仰泳...");
     }
 }

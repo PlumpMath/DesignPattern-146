@@ -1,28 +1,27 @@
-package com.zzkun.compound.goose;
+package com.zzkun.compound.chicken;
 
 import com.zzkun.compound.behavior.fly.DirectFlyBehavior;
 import com.zzkun.compound.behavior.swim.FrontCrawlSwimBehavior;
+import com.zzkun.compound.behavior.swim.NoSwimBehavior;
 import com.zzkun.compound.ducks.AbstractDuck;
-import com.zzkun.compound.ducks.Quackable;
 import com.zzkun.compound.observer.Observable;
-import com.zzkun.compound.observer.Observer;
 
 /**
  * Created by kun on 2016/4/27.
  */
-public class GooseAdapter extends AbstractDuck {
+public class ChickenAdapter extends AbstractDuck {
 
-    private Goose goose;
+    private Chicken chicken;
 
-    public GooseAdapter(Goose goose) {
-        super(new DirectFlyBehavior(), new FrontCrawlSwimBehavior());
-        this.goose = goose;
+    public ChickenAdapter(Chicken chicken) {
+        super(new DirectFlyBehavior(), new NoSwimBehavior());
+        this.chicken = chicken;
         observable = new Observable(this);
     }
 
     @Override
     public void quack() {
-        goose.honk();
+        chicken.chuckle();
         notifyObservers("quack");
     }
 }

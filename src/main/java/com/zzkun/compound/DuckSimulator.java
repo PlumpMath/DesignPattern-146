@@ -1,5 +1,6 @@
 package com.zzkun.compound;
 
+import com.zzkun.compound.ducks.AbstractDuck;
 import com.zzkun.compound.ducks.Flock;
 import com.zzkun.compound.ducks.Quackable;
 import com.zzkun.compound.factory.AbstractDuckFactory;
@@ -20,16 +21,16 @@ public class DuckSimulator {
     }
 
     void simulate(AbstractDuckFactory factory) {
-        Quackable mallard1 = factory.createMallardDuck();
-        Quackable mallard2 = factory.createMallardDuck();
-        Quackable mallard3 = factory.createMallardDuck();
-        Quackable mallard4 = factory.createMallardDuck();
+        AbstractDuck mallard1 = factory.createMallardDuck();
+        AbstractDuck mallard2 = factory.createMallardDuck();
+        AbstractDuck mallard3 = factory.createMallardDuck();
+        AbstractDuck mallard4 = factory.createMallardDuck();
         Flock flockOfMallards = new Flock().add(mallard1).add(mallard2).add(mallard3).add(mallard4);
 
-        Quackable redheadDuck = factory.createRedheadDuck();
-        Quackable duckCall = factory.createDuckCall();
-        Quackable rubberDuck = factory.createRubberDuck();
-        Quackable gooseDuck = new GooseAdapter(new Goose());
+        AbstractDuck redheadDuck = factory.createRedheadDuck();
+        AbstractDuck duckCall = factory.createDuckCall();
+        AbstractDuck rubberDuck = factory.createRubberDuck();
+        AbstractDuck gooseDuck = factory.createGoose();
         Flock flockOfDucks = new Flock().add(redheadDuck).add(duckCall).add(rubberDuck).add(gooseDuck).add(flockOfMallards);
 
         Quackologist quackologist = new Quackologist();
