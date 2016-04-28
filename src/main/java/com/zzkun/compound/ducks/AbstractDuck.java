@@ -33,10 +33,12 @@ public abstract class AbstractDuck implements Quackable, DuckObservable {
 
     public void fly() {
         flyBehavior.changePosition();
+        notifyObservers("fly");
     }
 
     public void swim() {
         swimBehavior.swim();
+        notifyObservers("swim");
     }
 
     @Override

@@ -9,6 +9,6 @@ public class Quackologist implements Observer {
 
     @Override
     public void update(AbstractDuck duck, String info) {
-        System.out.println("监视器：" + info + duck);
+        System.out.println("监视器：" + info + " " + duck);
     }
 }

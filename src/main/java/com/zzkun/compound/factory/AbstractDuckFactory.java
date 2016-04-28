@@ -12,4 +12,5 @@ public abstract class AbstractDuckFactory {
     public abstract AbstractDuck createDuckCall();
     public abstract AbstractDuck createRubberDuck();
     public abstract AbstractDuck createGoose();
+    public abstract AbstractDuck createChicken();
 }

@@ -1,5 +1,7 @@
 package com.zzkun.compound.factory;
 
+import com.zzkun.compound.chicken.Chicken;
+import com.zzkun.compound.chicken.ChickenAdapter;
 import com.zzkun.compound.ducks.*;
 import com.zzkun.compound.goose.Goose;
 import com.zzkun.compound.goose.GooseAdapter;
@@ -31,5 +33,10 @@ public class DuckFactory extends AbstractDuckFactory {
     @Override
     public AbstractDuck createGoose() {
         return new GooseAdapter(new Goose());
+    }
+
+    @Override
+    public AbstractDuck createChicken() {
+        return new ChickenAdapter(new Chicken());
     }
 }

@@ -1,10 +1,6 @@
 package com.zzkun.compound.util;
 
-import com.zzkun.compound.behavior.fly.NoFlyBehavior;
-import com.zzkun.compound.behavior.swim.NoSwimBehavior;
 import com.zzkun.compound.ducks.AbstractDuck;
-import com.zzkun.compound.ducks.Quackable;
-import com.zzkun.compound.observer.Observer;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -22,7 +18,7 @@ public class QuackCounter extends DuckDecorator {
 
     @Override
     public void quack() {
-        duck.quack();
+        super.quack();
         numberOfQuacks.incrementAndGet();
     }
 
